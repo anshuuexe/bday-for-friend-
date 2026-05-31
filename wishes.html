@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wishes for Snija 🌸</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400&family=Great+Vibes&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+</head>
+<body class="page-wishes">
+
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wishes.html" class="active">Wishes</a></li>
+      <li><a href="surprise.html">🎁 Surprise</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <p class="hero__label">✦ from the heart ✦</p>
+    <h1 class="page-hero__title">Birthday Wishes</h1>
+    <p class="page-hero__sub">for the one and only Snija</p>
+  </header>
+
+  <!-- LETTER SECTION -->
+  <section class="letter-section">
+    <div class="letter-envelope" id="envelope">
+      <div class="envelope-flap"></div>
+      <div class="envelope-body">
+        <p class="envelope-hint">Click to open ✉️</p>
+      </div>
+    </div>
+
+    <div class="letter-content hidden" id="letter">
+      <div class="letter-paper">
+        <p class="letter-date">June 23rd 🌸</p>
+        <p class="letter-greeting">Dear Snija,</p>
+        <p>There are some people who come into your life and just make everything brighter. You're one of those people — and I want you to know how much that means.</p>
+        <p>On this birthday, I hope the universe gives you back even a fraction of what you give to everyone around you. You deserve mornings full of light, evenings full of laughter, and a year so beautiful it takes your breath away.</p>
+        <p>May every wish you've ever kept secret finally find its way to you. May you be loved deeply, celebrated loudly, and held close by the people who matter most.</p>
+        <p>You are one of a kind, Snija. Genuinely, truly, irreplaceably <em>you</em>. And that is the most magical thing in the world.</p>
+        <p>Happy Birthday, gorgeous. 🎂✨</p>
+        <p class="letter-sign">With so much love,<br/><span>Your friend who made this website 🥺💛</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WISHES CARDS -->
+  <section class="wishes-grid-section">
+    <h2 class="section-title">A Few More Wishes ✨</h2>
+    <div class="wishes-grid">
+
+      <div class="wish-card" style="--delay:0s">
+        <div class="wish-icon">🌙</div>
+        <h3>Sweet Dreams</h3>
+        <p>May every night bring you the sweetest dreams, and every morning remind you of how wonderful life can be.</p>
+      </div>
+
+      <div class="wish-card" style="--delay:0.1s">
+        <div class="wish-icon">🌺</div>
+        <h3>Endless Joy</h3>
+        <p>May this year be filled with moments so beautiful that your heart overflows with gratitude and happiness.</p>
+      </div>
+
+      <div class="wish-card" style="--delay:0.2s">
+        <div class="wish-icon">⭐</div>
+        <h3>Big Dreams</h3>
+        <p>May every dream you hold dear come to life this year. You deserve everything you've ever wished for and more.</p>
+      </div>
+
+      <div class="wish-card" style="--delay:0.3s">
+        <div class="wish-icon">🦋</div>
+        <h3>Growth & Change</h3>
+        <p>May this new chapter bring beautiful transformations, new adventures, and versions of yourself you'll fall in love with.</p>
+      </div>
+
+      <div class="wish-card" style="--delay:0.4s">
+        <div class="wish-icon">🕯️</div>
+        <h3>Inner Peace</h3>
+        <p>May you always find calm in the storm, clarity in confusion, and comfort in who you are. You're enough — always.</p>
+      </div>
+
+      <div class="wish-card" style="--delay:0.5s">
+        <div class="wish-icon">💫</div>
+        <h3>Unstoppable You</h3>
+        <p>May nothing hold you back from becoming everything you were born to be. The world better be ready for you!</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BALLOON SECTION -->
+  <section class="balloon-section">
+    <div class="balloons">
+      <div class="balloon b1">🎈</div>
+      <div class="balloon b2">🎉</div>
+      <div class="balloon b3">🎈</div>
+      <div class="balloon b4">🎊</div>
+      <div class="balloon b5">🎈</div>
+    </div>
+    <p class="balloon-text">Make a wish, Snija! 🌠</p>
+  </section>
+
+  <footer class="footer">
+    <p>Made with <i class="fa-solid fa-heart" style="color:#e8a0b4;"></i> just for you, Snija</p>
+    <p class="footer-date">23 · 06 · 🌸</p>
+  </footer>
+
+  <script src="js/petals.js"></script>
+  <script>
+    // Envelope open effect
+    const envelope = document.getElementById('envelope');
+    const letter = document.getElementById('letter');
+    envelope.addEventListener('click', () => {
+      envelope.classList.add('open');
+      setTimeout(() => {
+        envelope.style.display = 'none';
+        letter.classList.remove('hidden');
+        letter.classList.add('fade-in');
+      }, 800);
+    });
+  </script>
+</body>
+</html>
