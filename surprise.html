@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Surprise for Snija 🎁</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400&family=Great+Vibes&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+</head>
+<body class="page-surprise">
+
+  <canvas id="petals-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wishes.html">Wishes</a></li>
+      <li><a href="surprise.html" class="active">🎁 Surprise</a></li>
+    </ul>
+  </nav>
+
+  <!-- SURPRISE REVEAL -->
+  <section class="surprise-section" id="surprise-intro">
+    <div class="surprise-box" id="gift-box">
+      <div class="gift-lid" id="gift-lid">
+        <div class="gift-bow">🎀</div>
+      </div>
+      <div class="gift-base">
+        <p class="gift-label">For Snija</p>
+      </div>
+      <p class="gift-hint">Tap the gift! 🎁</p>
+    </div>
+  </section>
+
+  <!-- REVEALED CONTENT (hidden until gift opened) -->
+  <div class="surprise-reveal hidden" id="reveal-content">
+
+    <!-- BIRTHDAY SONG / CAKE -->
+    <section class="cake-section">
+      <div class="cake-container">
+        <div class="cake">
+          <div class="cake-candles">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+          </div>
+          <div class="cake-top">🌸</div>
+          <div class="cake-layer layer1"></div>
+          <div class="cake-layer layer2"></div>
+          <div class="cake-layer layer3"></div>
+        </div>
+        <h2 class="cake-title">Happy Birthday, Snija! 🎂</h2>
+        <p class="cake-sub">Blow out the candles and make a wish ✨</p>
+        <button class="btn-candle" id="blow-btn">🌬️ Blow Candles!</button>
+      </div>
+    </section>
+
+    <!-- REASONS WHY YOU'RE AMAZING -->
+    <section class="reasons-section">
+      <h2 class="section-title">Reasons You're Amazing 💫</h2>
+      <div class="reasons-carousel" id="reasons-carousel">
+        <div class="reason-slide active">
+          <span class="reason-num">01</span>
+          <p>You make people feel seen and heard without even trying.</p>
+        </div>
+        <div class="reason-slide">
+          <span class="reason-num">02</span>
+          <p>Your laugh is genuinely contagious — the best kind of infection.</p>
+        </div>
+        <div class="reason-slide">
+          <span class="reason-num">03</span>
+          <p>You somehow manage to be both hilarious and deeply wise at the same time.</p>
+        </div>
+        <div class="reason-slide">
+          <span class="reason-num">04</span>
+          <p>The way you show up for people you care about is truly inspiring.</p>
+        </div>
+        <div class="reason-slide">
+          <span class="reason-num">05</span>
+          <p>Your aesthetic sense is *chef's kiss* — you make everything look beautiful.</p>
+        </div>
+        <div class="reason-slide">
+          <span class="reason-num">06</span>
+          <p>You have a kind of quiet strength that moves mountains without making a fuss.</p>
+        </div>
+        <div class="reason-slide">
+          <span class="reason-num">07</span>
+          <p>Knowing you is one of the best things that has happened. No question.</p>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="prev-reason">← Prev</button>
+        <span class="carousel-dots" id="reason-dots"></span>
+        <button class="carousel-btn" id="next-reason">Next →</button>
+      </div>
+    </section>
+
+    <!-- VIRTUAL GIFT -->
+    <section class="virtual-gift-section">
+      <h2 class="section-title">Your Virtual Birthday Gift 🎁</h2>
+      <div class="gift-grid">
+        <div class="vgift-card" onclick="openGift(this)">
+          <div class="vgift-front">🌹<p>A rose</p></div>
+          <div class="vgift-back">A reminder that you bloom beautifully even through the hardest seasons. 🌹</div>
+        </div>
+        <div class="vgift-card" onclick="openGift(this)">
+          <div class="vgift-front">⭐<p>A star</p></div>
+          <div class="vgift-back">Named after you — because you deserve to shine in the sky forever. ⭐</div>
+        </div>
+        <div class="vgift-card" onclick="openGift(this)">
+          <div class="vgift-front">🌙<p>A wish</p></div>
+          <div class="vgift-back">The deepest wish: may this year be the beginning of everything you've ever dreamed of. 🌙</div>
+        </div>
+        <div class="vgift-card" onclick="openGift(this)">
+          <div class="vgift-front">💛<p>A hug</p></div>
+          <div class="vgift-back">A warm, tight, "I'm so glad you exist" kind of hug — sent with love. 💛</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL MESSAGE -->
+    <section class="final-message">
+      <div class="final-card">
+        <h2>One Last Thing... 🥺</h2>
+        <p>However this year treats you — whether it's messy, beautiful, confusing, or magical — just know that you are deeply, genuinely loved. And that will never change.</p>
+        <p>Happy Birthday, Snija. You deserve every wonderful thing. 🌸✨</p>
+        <div class="confetti-btn-wrap">
+          <button class="btn-main" onclick="launchConfetti()">🎊 Celebrate!</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <p>Made with <i class="fa-solid fa-heart" style="color:#e8a0b4;"></i> just for you, Snija</p>
+    <p class="footer-date">23 · 06 · 🌸</p>
+  </footer>
+
+  <script src="js/petals.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/surprise.js"></script>
+</body>
+</html>

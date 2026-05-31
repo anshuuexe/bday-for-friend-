@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Snija 🌸</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400&family=Great+Vibes&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Floating petals canvas -->
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="wishes.html">Wishes</a></li>
+      <li><a href="surprise.html">🎁 Surprise</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero" id="home">
+    <div class="hero__deco hero__deco--left">
+      <div class="petal-cluster" id="left-cluster"></div>
+    </div>
+
+    <div class="hero__center">
+      <p class="hero__label">✦ a little something for you ✦</p>
+      <h1 class="hero__name">Snija</h1>
+      <div class="hero__divider">
+        <span></span><i class="fa-solid fa-heart"></i><span></span>
+      </div>
+      <p class="hero__subtitle">is turning another year more</p>
+      <p class="hero__adjectives">radiant &nbsp;·&nbsp; magical &nbsp;·&nbsp; extraordinary</p>
+      <div class="hero__date-badge">
+        <span class="date-badge__day">23</span>
+        <span class="date-badge__month">June</span>
+      </div>
+      <a href="wishes.html" class="btn-main">Read Your Wishes <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="hero__deco hero__deco--right">
+      <div class="petal-cluster" id="right-cluster"></div>
+    </div>
+  </header>
+
+  <!-- QUOTE SECTION -->
+  <section class="quote-section">
+    <div class="quote-card">
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      <p class="quote-text">Here's to you — the girl who lights up every room without even trying, whose laugh is the best sound in the world, and whose heart is pure gold.</p>
+      <p class="quote-author">— with all the love 💛</p>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN SECTION -->
+  <section class="countdown-section">
+    <h2 class="section-title">Counting Down to Your Day ✨</h2>
+    <div class="countdown-grid" id="countdown">
+      <div class="countdown-item">
+        <span class="countdown-num" id="days">00</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span class="countdown-num" id="hours">00</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span class="countdown-num" id="minutes">00</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item">
+        <span class="countdown-num" id="seconds">00</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
+    </div>
+    <p class="countdown-sub" id="countdown-sub">until your special day 🌸</p>
+  </section>
+
+  <!-- ABOUT SNIJA SECTION -->
+  <section class="about-section">
+    <div class="about-card">
+      <div class="about-icon">🌙</div>
+      <h3>She's a Dreamer</h3>
+      <p>Always chasing something beautiful, something meaningful. The kind of person who makes every ordinary moment feel like poetry.</p>
+    </div>
+    <div class="about-card">
+      <div class="about-icon">🌸</div>
+      <h3>She's Rare</h3>
+      <p>Genuine, warm, and effortlessly kind. The world is genuinely better because Snija is in it — and that's not flattery, it's just true.</p>
+    </div>
+    <div class="about-card">
+      <div class="about-icon">✨</div>
+      <h3>She's Magic</h3>
+      <p>There's something about her energy that just draws people in. Like stardust in human form — a little sparkle wherever she goes.</p>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <p>Ready for a little surprise? 🎁</p>
+    <a href="surprise.html" class="btn-secondary">Open Surprise &nbsp;<i class="fa-solid fa-gift"></i></a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Made with <i class="fa-solid fa-heart" style="color:#e8a0b4;"></i> just for you, Snija</p>
+    <p class="footer-date">23 · 06 · 🌸</p>
+  </footer>
+
+  <script src="js/petals.js"></script>
+  <script src="js/countdown.js"></script>
+</body>
+</html>
